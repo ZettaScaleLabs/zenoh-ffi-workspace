@@ -8,9 +8,9 @@ fn main() {
     if cargo_manifest_dir.starts_with(cargo_home) {
         panic!("\n\
         The module `zenoh-ffi-workspace` should not be used as a cargo dependency.\n\
-        One of it's purposes is to provide access to workspace directory to zenoh-ffi/build.rs\n\
-        So to be able to do it the zenoh-ffi-workspace/build.rs should be located in the workspace directory.\n\n\
-        Place the zenoh-ffi-workspace source to the workspace (with git clone or git submodule)\n\
+        One of its purposes is to provide access to the workspace directory for zenoh-ffi/build.rs.\n\
+        To enable this, zenoh-ffi-workspace/build.rs must be located in the workspace directory.\n\n\
+        Place the zenoh-ffi-workspace source in the workspace (with git clone or git submodule)\n\
         and use [patch.crates.io] and [patch.\"https://github.com/eclipse-zenoh/zenoh-ffi\"] sections\n\
         to make zenoh-ffi use this local version of zenoh-ffi-workspace.\n\
         See README.md and crate documentation for more information.
