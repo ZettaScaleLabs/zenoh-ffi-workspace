@@ -15,5 +15,7 @@ fn main() {
 
     let workspace_root = project_root::get_project_root().unwrap();
     let cargo_lock = workspace_root.join("Cargo.lock");
+    let target = std::env::var("TARGET").unwrap();
     println!("cargo:rustc-env=CARGO_LOCK={}", cargo_lock.display());
+    println!("cargo:rustc-env=TARGET={}", target);
 }
