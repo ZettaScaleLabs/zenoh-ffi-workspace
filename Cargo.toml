@@ -12,7 +12,7 @@
 #   ZettaScale Zenoh Team, <zenoh@zettascale.tech>
 #
 [package]
-name = "zenoh-ffi"
+name = "zenoh-ffi-workspace"
 version = "1.5.0"
 repository = "https://github.com/eclipse-zenoh/zenoh-c"
 homepage = "http://zenoh.io"
@@ -22,7 +22,7 @@ authors = [
 edition = "2021"
 license = "EPL-2.0 OR Apache-2.0"
 categories = ["network-programming"]
-description = "The Zenoh-FFI crate provides a Foreign Function Interface (FFI) for the Zenoh library, allowind to easily implement bindings to other languages"
+description = "The Zenoh-FFI crate provides a Foreign Function Interface (FFI) for the Zenoh library, allowing to easily implement bindings to other languages"
 readme = "README.md"
 build = "build.rs"
 

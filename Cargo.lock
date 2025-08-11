@@ -9,7 +9,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8bccbff07d5ed689c4087d20d7307a52ab6141edeedf487c3876a55b86cf63df"
 
 [[package]]
-name = "zenoh-ffi"
+name = "zenoh-ffi-workspace"
 version = "1.5.0"
 dependencies = [
  "project-root",
