@@ -25,3 +25,6 @@ categories = ["network-programming"]
 description = "The Zenoh-FFI crate provides a Foreign Function Interface (FFI) for the Zenoh library, allowind to easily implement bindings to other languages"
 readme = "README.md"
 build = "build.rs"
+
+[build-dependencies]
+project-root = "0.2"

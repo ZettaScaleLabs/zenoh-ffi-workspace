@@ -12,4 +12,8 @@ fn main() {
         See README.md and crate documentation for more information.
         ");
     }
+
+    let workspace_root = project_root::get_project_root().unwrap();
+    let cargo_lock = workspace_root.join("Cargo.lock");
+    println!("cargo:rustc-env=CARGO_LOCK={}", cargo_lock.display());
 }
