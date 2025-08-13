@@ -5,7 +5,7 @@ fn main() {
     if let Ok(cargo_lock_path) = std::env::var("CARGO_LOCK") {
         // Check if cargo_lock_path is absolute
         if !PathBuf::from(&cargo_lock_path).is_absolute() {
-            panic!("CARGO_LOCK={} must be an absolute path", cargo_lock_path);
+            panic!("\nCARGO_LOCK={} must be an absolute path\n", cargo_lock_path);
         }
         println!("cargo:rustc-env=CARGO_LOCK_PATH={cargo_lock_path}");
         return;
@@ -15,11 +15,12 @@ fn main() {
     let cargo_manifest_dir = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap());
     if cargo_manifest_dir.starts_with(cargo_home) {
         panic!("\n\
-        The crate `zenoh-ffi-workspace` located at {} is being used as a cargo dependency.\n\
+        The crate `zenoh-ffi-workspace` located at {}\n\
+        is being used as a cargo dependency.\n\
         Being not located inside the workspace it cannot determine the path to workspace's `Cargo.lock`.\n\
         \n\
         Two solutions are possible:\n\
-        1. Explicitly pass the path to Cargo.lock in the environment variable CARGO_LOCK. E.g.\n\
+        1. Explicitly pass the absolute path to Cargo.lock in the environment variable CARGO_LOCK. E.g.\n\
         \n\
         CARGO_LOCK=$PWD/Cargo.lock cargo build\n\
         \n\
