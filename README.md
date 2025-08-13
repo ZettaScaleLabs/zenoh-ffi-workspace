@@ -5,8 +5,8 @@ A technical crate providing the path to the workspace's Cargo.lock, which is nec
 ## Usage
 
 This crate allows zenoh-ffi to determine the path to the workspace's `Cargo.lock` file. zenoh-ffi needs it to correctly
-determine the size and alignment of so-called "opaque types": the blind repr(C) structures equal to corresponding Rust ones.
-Unfortunately, cargo doesn't allow dependent crates to know the path to the workspace where they're being built, 
+determine the size and alignment of so-called "opaque types": blind repr(C) structures equivalent to corresponding Rust ones.
+Unfortunately, cargo doesn't allow dependent crates to know the path to the workspace where they're being built,
 so additional tweaks are necessary to pass this information to the zenoh-ffi crate.
 
 ### Solution 1: Environment Variable
@@ -21,7 +21,7 @@ zenoh-ffi-workspace simply passes this value to the zenoh-ffi crate.
 
 ### Solution 2: Workspace Integration
 
-Add the crate to your workspace and patch it locally:
+Add the crate to your workspace and substitute the original "zenoh-ffi-workspace" with a local version:
 
 1. Clone the repository:
 
