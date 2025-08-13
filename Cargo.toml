@@ -14,7 +14,7 @@
 [package]
 name = "zenoh-ffi-workspace"
 version = "1.5.0"
-repository = "https://github.com/eclipse-zenoh/zenoh-c"
+repository = "https://github.com/eclipse-zenoh/zenoh-ffi-workspace"
 homepage = "http://zenoh.io"
 authors = [
     "ZettaScale Zenoh Team, <zenoh@zettascale.tech>"
@@ -22,7 +22,7 @@ authors = [
 edition = "2021"
 license = "EPL-2.0 OR Apache-2.0"
 categories = ["network-programming"]
-description = "The Zenoh-FFI crate provides a Foreign Function Interface (FFI) for the Zenoh library, allowing to easily implement bindings to other languages"
+description = "The zenoh-ffi-workspace allows to determine path to workspace's Cargo.lock file"
 readme = "README.md"
 build = "build.rs"
 

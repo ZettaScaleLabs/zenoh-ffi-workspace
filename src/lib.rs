@@ -11,4 +11,7 @@
 // Contributors:
 //   ZettaScale Zenoh team, <zenoh@zettascale.tech>
 //
-// This is empty project, it's functionality is in build.rs
+pub fn get_cargo_lock_path() -> std::path::PathBuf {
+    // return the content of the environment variable CARGO_LOCK_PATH passed from build.rs
+    env!("CARGO_LOCK_PATH").into()
+}
